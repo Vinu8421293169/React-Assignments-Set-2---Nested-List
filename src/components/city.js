@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Town from "./town";
-export default function City({ cities }) {
-  const [townIndex, setTownIndex] = useState(-1);
+
+export default function City({ cities, index }) {
+  const [townIndex, setTownIndex] = useState(index);
 
   const handleTown = (index) => {
+    if (townIndex === index) {
+      setTownIndex(-1);
+      return;
+    }
     setTownIndex(index);
   };
 
@@ -18,7 +23,6 @@ export default function City({ cities }) {
           </>
         );
       })}
-      <div>Towns:</div>
       {townIndex !== -1 && <Town towns={cities[townIndex].towns}></Town>}
     </>
   );

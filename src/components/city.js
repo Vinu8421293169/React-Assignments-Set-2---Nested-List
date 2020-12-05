@@ -18,6 +18,7 @@ export default function City({ cities }) {
           </>
         );
       })}
+      <div>Towns:</div>
       {townIndex !== -1 && <Town towns={cities[townIndex].towns}></Town>}
     </>
   );

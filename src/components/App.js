@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "./../styles/App.css";
 import State from "./states";
 
@@ -158,6 +158,7 @@ const states = [
 function App() {
   return (
     <div id="main">
+      <div>States:</div>
       <State states={states}></State>
     </div>
   );

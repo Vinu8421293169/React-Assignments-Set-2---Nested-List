@@ -18,6 +18,7 @@ function State({ states }) {
           </>
         );
       })}
+      <div>Cities:</div>
       {cityIndex !== -1 && <City cities={states[cityIndex].cities}></City>}
     </>
   );
